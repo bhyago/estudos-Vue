@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <div>{{`A soma de ${number1} + ${number2} é ?`}}</div>
+    <input type="text" v-model="result">
+    <span v-if="number1 + number2 == parseInt(result)">Acertou!</span>
+    <span v-if="result != 0 && number1 + number2 != parseInt(result)">errou!!</span>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
