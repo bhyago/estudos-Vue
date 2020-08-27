@@ -1,0 +1,12 @@
+ciclo de  vida
+beforeCreate:function() antes do elemento ser criado 
+created: quando o elemento for criado
+
+beforeMount: antes de renderizar
+mount: elemento renderizado
+
+beforeUpdate:...
+update:...
+
+beforeDestroy
+destroyed
