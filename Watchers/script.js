@@ -1,27 +1,17 @@
 let app = new Vue({
 	el:'#app',
 	data:{
-		conta:'',
-		aviso:'',
-		resultado:'',
-		timer:null
+		aviso:true,
+		divid:'qualquer',
+		link:'https://google.com.br',
+		n:12
 	},
 	methods: {
-		fazerConta: function() {
-			this.aviso = '';
-
-			this.resultado = eval(this.conta);
-		}
-	},
-	watch: {
-		conta:function() {
-			this.aviso = 'Digitando...';
-			
-			if(this.timer !=null ) {
-				clearTimeout(this.timer);
-			}
-
-			this.timer = setTimeout(this.fazerConta, 1000);
+		clicou:() => {
+			alert("Eventa funcionou! Clicou!")
+		},
+		enviou:() => {
+			alert("Formulario enviado")
 		}
 	},
 });
