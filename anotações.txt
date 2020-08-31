@@ -10,3 +10,5 @@ update:...
 
 beforeDestroy
 destroyed
+-----------------------------------------------
+v-bind
