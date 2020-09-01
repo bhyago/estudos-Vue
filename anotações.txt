@@ -11,4 +11,5 @@ update:...
 beforeDestroy
 destroyed
 -----------------------------------------------
-v-bind
+propriedades computadas são sincronas
+watch: monitora as mudança das propriedades
