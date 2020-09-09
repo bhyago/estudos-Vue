@@ -1,0 +1,22 @@
+{
+  "propriedades": [
+    {
+      "id": 1,
+      "modelo": "text",
+      "titulo": "CPF/CNPJ",
+      "obrigatorio": true
+    },
+    {
+      "modelo": "text",
+      "titulo": "Nome Completo",
+      "obrigatorio": false,
+      "id": 4
+    },
+    {
+      "modelo": "text",
+      "id": 7,
+      "titulo": "telefone",
+      "obrigatorio": true
+    }
+  ]
+}
