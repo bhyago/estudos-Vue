@@ -17,6 +17,26 @@
       "id": 7,
       "titulo": "telefone",
       "obrigatorio": true
+    },
+    {
+      "modelo": "text",
+      "id": 8,
+      "titulo": "cnpj",
+      "obrigatorio": "true"
+    }
+  ],
+
+  "produtos": [
+    {
+      "modelo": "text",
+      "id": 1,
+      "titulo": "produto 1",
+      "obrigatorio": false
+    },{
+      "modelo": "text",
+      "id": 1,
+      "titulo": "produto 2",
+      "obrigatorio": false
     }
   ]
 }
