@@ -3,7 +3,8 @@
     <v-content>
       <v-container>
         <router-view>
-          <SignIn />
+          <!-- <SignIn /> -->
+          <Header />
         </router-view>
       </v-container>
     </v-content>
@@ -11,13 +12,15 @@
 </template>
 
 <script>
-import SignIn from "./components/SignIn";
+// import SignIn from "./components/SignIn";
+import Header from "./components/Header";
 
 export default {
   name: "App",
 
   components: {
-    SignIn,
+    // SignIn,
+    Header,
   },
 
   data: () => ({
