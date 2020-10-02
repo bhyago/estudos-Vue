@@ -1,41 +1,31 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col cols="3" v-for="(item, id) in formulario" :key="id" :align="item.align">
-        <v-btn
-          :class="item.textAlign"
-          :fab="item.fab"
-          :x-small="item.xsmall"
-          :small="item.small"
-          :large="item.large"
-          :x-large="item.xlarge"
-          :color="item.color"
-          :dark="item.dark"
-          :outlined="item.outlined"
-          :rounded="item.rounded"
-          :tile="item.tile"
-          :block="item.block"
-        >
-          <v-icon v-if="item.icon">{{item.imageIcon}}</v-icon>
-          {{item.title}}
-        </v-btn>
-      </v-col>
-    </v-row>
-  </v-container>
+  <v-btn
+    :class="formulario.textAlign"
+    :fab="formulario.fab"
+    :x-small="formulario.xsmall"
+    :small="formulario.small"
+    :large="formulario.large"
+    :x-large="formulario.xlarge"
+    :color="formulario.color"
+    :dark="formulario.dark"
+    :outlined="formulario.outlined"
+    :rounded="formulario.rounded"
+    :tile="formulario.tile"
+    :block="formulario.block"
+  >
+    <v-icon v-if="formulario.icon">{{ formulario.imageIcon }}</v-icon>
+    {{ formulario.title }}
+  </v-btn>
 </template>
 <script>
 export default {
-  props: ["formulario"],
+  props: {
+    formulario: Object,
+  },
   data() {
     return {
       itensButtons: [],
     };
   },
-  // created() {
-  //   this.$http.get("buttons").then((res) => {
-  //     this.itensButtons = res.data;
-  //     console.log(this.buttons);
-  //   });
-  // },
 };
 </script>

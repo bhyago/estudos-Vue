@@ -1,25 +1,23 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col :key="id" :cols="item.coluns">
-        <v-text-field
-          :color="item.color"
-          :label="item.label"
-          :placeholder="item.placeholder"
-          :outlined="item.outlined"
-          :filled="item.filled"
-          :counter="item.InputCounter === true ? item.counter : undefined"
-          :maxlength="item.counter"
-          :rules="[rules.required]"
-        ></v-text-field>
-      </v-col>
-    </v-row>
-  </v-container>
+  <v-text-field
+    :color="formulario.color"
+    :label="formulario.label"
+    :placeholder="formulario.placeholder"
+    :outlined="formulario.outlined"
+    :filled="formulario.filled"
+    :counter="formulario.InputCounter === true ? formulario.counter : undefined"
+    :maxlength="formulario.counter"
+    :shaped="formulario.shaped"
+    :solo-inverted="formulario.soloInverted"
+    :rules="[rules.required]"
+  ></v-text-field>
 </template>
 
 <script>
 export default {
-  props: ["formulario"],
+  props: {
+    formulario: Object,
+  },
   data() {
     return {
       rules: {
@@ -37,11 +35,5 @@ export default {
       },
     };
   },
-  // created() {
-  //   this.$http.get("form").then((res) => {
-  //     this.itemInput = res.data;
-  //     console.log(this.itemInput);
-  //   });
-  // },
 };
 </script>

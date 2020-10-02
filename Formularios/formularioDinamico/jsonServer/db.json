@@ -1,8 +1,8 @@
 {
   "form": {
-    "tipo": "entradaDeTexto",
     "componentes": [
       {
+        "row": true,
         "tipo": "entradaDeTexto",
         "id": 1,
         "type": "text",
@@ -15,9 +15,11 @@
         "required": true,
         "InputCounter": true,
         "counter": "25",
-        "color": "green"
+        "color": "green",
+        "shaped": false
       },
       {
+        "row": false,
         "tipo": "entradaDeTexto",
         "id": 2,
         "type": "text",
@@ -30,9 +32,11 @@
         "required": true,
         "InputCounter": true,
         "counter": "",
-        "color": "blue"
+        "color": "blue",
+        "shaped": false
       },
       {
+        "row": true,
         "tipo": "entradaDeTexto",
         "id": 3,
         "type": "text",
@@ -45,7 +49,8 @@
         "required": true,
         "InputCounter": false,
         "counter": "",
-        "color": "blue"
+        "color": "blue",
+        "shaped": false
       },
       {
         "tipo": "entradaDeTexto",
@@ -60,7 +65,8 @@
         "required": true,
         "InputCounter": false,
         "counter": "",
-        "color": "blue"
+        "color": "blue",
+        "shaped": false
       },
       {
         "tipo": "entradaDeTexto",
@@ -74,7 +80,8 @@
         "filled": false,
         "required": true,
         "counter": "",
-        "color": "blue"
+        "color": "blue",
+        "shaped": false
       },
       {
         "tipo": "entradaDeTexto",
@@ -88,7 +95,8 @@
         "filled": false,
         "required": true,
         "counter": "",
-        "color": "blue"
+        "color": "blue",
+        "shaped": false
       },
       {
         "tipo": "entradaDeTexto",
@@ -103,7 +111,29 @@
         "required": true,
         "InputCounter": false,
         "counter": "",
-        "color": "blue"
+        "color": "blue",
+        "shaped": false
+      },
+      {
+        "id": 1,
+        "coluns": "12",
+        "tipo": "button",
+        "title": "cancelar",
+        "align": "start",
+        "textAlign": "left",
+        "fab": false,
+        "xsmall": false,
+        "small": false,
+        "large": true,
+        "xlarge": false,
+        "color": "blue",
+        "dark": false,
+        "outlined": false,
+        "rounded": false,
+        "tile": false,
+        "block": true,
+        "icon": true,
+        "imageIcon": "mdi-vuetify"
       },
       {
         "tipo": "entradaDeTexto",
@@ -118,7 +148,8 @@
         "required": true,
         "InputCounter": false,
         "counter": "",
-        "color": "blue"
+        "color": "blue",
+        "shaped": true
       },
       {
         "tipo": "entradaDeTexto",
@@ -133,7 +164,8 @@
         "required": true,
         "InputCounter": true,
         "counter": "25",
-        "color": "blue"
+        "color": "blue",
+        "shaped": false
       },
       {
         "tipo": "entradaDeTexto",
@@ -148,27 +180,8 @@
         "required": true,
         "InputCounter": false,
         "counter": "",
-        "color": "blue"
-      },
-      {
-        "tipo": "entradaDeTexto",
-        "id": 1,
-        "title": "cancelar",
-        "align": "start",
-        "textAlign": "",
-        "fab": false,
-        "xsmall": false,
-        "small": false,
-        "large": true,
-        "xlarge": false,
         "color": "blue",
-        "dark": false,
-        "outlined": false,
-        "rounded": false,
-        "tile": false,
-        "block": true,
-        "icon": true,
-        "imageIcon": "mdi-vuetify"
+        "shaped": false
       },
       {
         "tipo": "entradaDeTexto",
@@ -182,7 +195,8 @@
         "filled": false,
         "required": true,
         "counter": "",
-        "color": "blue"
+        "color": "blue",
+        "shaped": false
       },
       {
         "tipo": "entradaDeTexto",
@@ -196,7 +210,8 @@
         "filled": false,
         "required": true,
         "counter": "",
-        "color": "blue"
+        "color": "blue",
+        "shaped": false
       },
       {
         "tipo": "entradaDeTexto",
@@ -210,34 +225,23 @@
         "filled": false,
         "required": true,
         "counter": "",
-        "color": "blue"
-      }
-    ],
-    "radioButtons": [
-      {
-        "label": "cpf",
-        "value": "cpf",
-        "color": "red"
+        "color": "blue",
+        "shaped": false,
+        "soloInverted": true
       },
       {
-        "id": 2,
-        "label": "cnpj",
-        "value": "cnpj",
-        "color": "red"
-      }
-    ],
-    "buttons": [
-      {
+        "tipo": "button",
+        "coluns": "4",
         "id": 1,
-        "title": "cancelar",
+        "title": "salvar",
         "align": "start",
         "textAlign": "",
         "fab": false,
         "xsmall": false,
         "small": false,
-        "large": true,
-        "xlarge": false,
-        "color": "blue",
+        "large": false,
+        "xlarge": true,
+        "color": "green",
         "dark": false,
         "outlined": false,
         "rounded": false,
@@ -245,6 +249,39 @@
         "block": true,
         "icon": true,
         "imageIcon": "mdi-vuetify"
+      },
+      {
+        "tipo": "autoComplete",
+        "label": "",
+        "placeholder": "",
+        "auto-select-first": false,
+        "chips": false,
+        "clearable": false,
+        "deletable-chips": false,
+        "dense": false,
+        "filled": false,
+        "multiple": false,
+        "rounded": false,
+        "small-chips": false,
+        "solo": false,
+        "solo-inverted": false
+      },
+      {
+        "tipo": "radioGroup",
+        "columns": false,
+        "row": true,
+        "radioButtons": [
+          {
+            "label": "cpf",
+            "value": "cpf",
+            "color": "red"
+          },
+          {
+            "label": "cnpj",
+            "value": "cnpj",
+            "color": "blue"
+          }
+        ]
       }
     ]
   }
