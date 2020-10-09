@@ -2,26 +2,35 @@
   <v-radio-group
     v-model="radios"
     :row="formulario.row"
-    :column="formulario.colun"
+    :column="formulario.column"
   >
-    <v-radio
-      :label="formulario.label"
-      :value="formulario.value"
-      :color="formulario.color"
-    />
+    <div :v-if="formulario.radioButtons">
+      <v-radio
+        v-for="(item, id) in formulario.radioButtons"
+        :key="id"
+        :label="item.label"
+        :value="item.value"
+        :color="item.color"
+        @click="aoClicar(item)"
+      />
+    </div>
   </v-radio-group>
 </template>
 <script>
+import propsMixin from "@/mixins/propsMixin";
+import eventBus from "@/eventBus";
 export default {
-  props: {
-    formulario: Object,
-  },
+  mixins: [propsMixin],
   data() {
     return {
-      label: "cpf",
       radios: "",
-      radioButton: [],
     };
+  },
+  methods: {
+    aoClicar(item) {
+      this.radios = item.value;
+      eventBus.$emit("novoPlaceholder", this.radios);
+    },
   },
 };
 </script>

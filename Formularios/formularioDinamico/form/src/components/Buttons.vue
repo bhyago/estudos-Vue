@@ -12,16 +12,16 @@
     :rounded="formulario.rounded"
     :tile="formulario.tile"
     :block="formulario.block"
+    @click="functionJson(formulario.onClick)"
   >
     <v-icon v-if="formulario.icon">{{ formulario.imageIcon }}</v-icon>
     {{ formulario.title }}
   </v-btn>
 </template>
 <script>
+import propsMixin from "@/mixins/propsMixin";
 export default {
-  props: {
-    formulario: Object,
-  },
+  mixins: [propsMixin],
   data() {
     return {
       itensButtons: [],

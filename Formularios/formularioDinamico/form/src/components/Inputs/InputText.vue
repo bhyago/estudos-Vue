@@ -1,7 +1,7 @@
 <template>
   <v-text-field
     :color="formulario.color"
-    :label="formulario.label"
+    :label="formulario.label === 'event' ? label : formulario.label"
     :placeholder="formulario.placeholder"
     :outlined="formulario.outlined"
     :filled="formulario.filled"
@@ -14,12 +14,14 @@
 </template>
 
 <script>
+import propsMixin from "@/mixins/propsMixin";
+import eventBus from "@/eventBus";
+
 export default {
-  props: {
-    formulario: Object,
-  },
+  mixins: [propsMixin],
   data() {
     return {
+      label: "",
       rules: {
         required: (value) => !!value || "campo obrigatorio.",
         counter: (value, numero) =>
@@ -35,5 +37,11 @@ export default {
       },
     };
   },
+  created() {
+    eventBus.$on("novoPlaceholder", (label) => {
+      this.label = label;
+    });
+  },
+  methods: {},
 };
 </script>

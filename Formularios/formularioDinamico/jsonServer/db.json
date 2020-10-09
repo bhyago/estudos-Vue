@@ -133,7 +133,7 @@
         "tile": false,
         "block": true,
         "icon": true,
-        "imageIcon": "mdi-vuetify"
+        "imageIcon": "mdi-delete"
       },
       {
         "tipo": "entradaDeTexto",
@@ -232,7 +232,7 @@
       {
         "tipo": "button",
         "coluns": "4",
-        "id": 1,
+        "id": 23,
         "title": "salvar",
         "align": "start",
         "textAlign": "",
@@ -248,12 +248,13 @@
         "tile": false,
         "block": true,
         "icon": true,
-        "imageIcon": "mdi-vuetify"
+        "imageIcon": "mdi-pencil",
+        "onClick": "alert(`você clicou no botão!!!`)"
       },
       {
         "tipo": "autoComplete",
-        "label": "",
-        "placeholder": "",
+        "label": "testee",
+        "placeholder": "teste",
         "auto-select-first": false,
         "chips": false,
         "clearable": false,
@@ -268,20 +269,36 @@
       },
       {
         "tipo": "radioGroup",
-        "columns": false,
+        "column": false,
         "row": true,
         "radioButtons": [
           {
             "label": "cpf",
-            "value": "cpf",
+            "value": "CPF",
             "color": "red"
           },
           {
             "label": "cnpj",
-            "value": "cnpj",
+            "value": "CNPJ",
             "color": "blue"
           }
         ]
+      },
+      {
+        "tipo": "entradaDeTexto",
+        "id": 13,
+        "type": "text",
+        "label": "event",
+        "coluns": "9",
+        "placeholder": "",
+        "mask": false,
+        "outlined": true,
+        "filled": false,
+        "required": true,
+        "counter": "",
+        "color": "orange",
+        "shaped": false,
+        "soloInverted": false
       }
     ]
   }

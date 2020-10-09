@@ -8,9 +8,9 @@
       >
         <InputText v-if="item.tipo === 'entradaDeTexto'" :formulario="item" />
         <Buttons v-if="item.tipo === 'button'" :formulario="item" />
-        <InputRadio v-if="item.tipo === 'radioButton'" :formulario="item" />
+        <InputRadio v-if="item.tipo === 'radioGroup'" :formulario="item" />
+        <AutoComplete v-if="item.tipo === 'autoComplete'" :formulario="item" />
       </v-col>
-      <AutoComplete />
     </div>
   </v-form>
 </template>
