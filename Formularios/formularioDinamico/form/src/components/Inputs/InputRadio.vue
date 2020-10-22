@@ -31,6 +31,11 @@ export default {
       this.radios = item.value;
       eventBus.$emit("novoPlaceholder", this.radios);
     },
+    update() {
+      this.$http.get(`form`).then((component) => {
+        console.log(component);
+      });
+    },
   },
 };
 </script>

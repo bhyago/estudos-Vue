@@ -12,7 +12,7 @@
     :rounded="formulario.rounded"
     :tile="formulario.tile"
     :block="formulario.block"
-    @click="functionJson(formulario.onClick)"
+    @click="jsonEvent(formulario.onClick)"
   >
     <v-icon v-if="formulario.icon">{{ formulario.imageIcon }}</v-icon>
     {{ formulario.title }}

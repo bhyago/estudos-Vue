@@ -1,10 +1,16 @@
 <template>
   <v-app>
     <v-main>
-      <v-row align="center" justify="center" class="grey lighten-5" style="height: 100%;">
+      <v-row
+        align="center"
+        justify="center"
+        class="grey lighten-5"
+        style="height: 100%"
+      >
         <v-card width="700px">
           <!-- <InputText /> -->
-          <FormDinamico />
+          <component :is="teste"></component>
+          <!-- <FormDinamico /> -->
         </v-card>
       </v-row>
 
@@ -15,11 +21,14 @@
 
 <script>
 import FormDinamico from "./components/FormDinamico";
-// import InputText from "./components/Inputs/InputText";
 export default {
   components: {
-    // InputText,
     FormDinamico,
+  },
+  computed: {
+    teste: function () {
+      return FormDinamico;
+    },
   },
   name: "App",
 

@@ -1,3 +1,4 @@
+  
 <template>
   <v-text-field
     :color="formulario.color"
@@ -16,7 +17,6 @@
 <script>
 import propsMixin from "@/mixins/propsMixin";
 import eventBus from "@/eventBus";
-
 export default {
   mixins: [propsMixin],
   data() {
